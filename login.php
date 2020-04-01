@@ -288,9 +288,6 @@ exit();
             <!-- For demo purposes – can be removed on production : End -->
 
             <!--Pay Stack Script-->
-            <!--
-				All price should be multipled with 100 bcos paystack bill in KOBO
-			-->
 
             <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
            
@@ -300,13 +297,13 @@ exit();
                     var handler = PaystackPop.setup({
 						//WIll make use of your test api public key
                         key: 'pk_live_cafb0e79f1d6e2553630a61007d5b3c0fc9c1fdd', 
-                        email: 'customer@email.com', //put your customer's email here
-                        amount: 370000, //amount the customer is supposed to pay
+                        email: 'customer@email.com', //put customer's email here
+                        amount: 370000, //Multiple the amount with 100 always convert to KOBO we won't be unfortunate 
                         metadata: {
                             custom_fields: [{
                                 display_name: "Mobile Number",
                                 variable_name: "mobile_number",
-                                value: "+2348012345678" //customer's mobile number
+                                value: "+2348184980414"
                             }]
                         },
                         callback: function(response) {
